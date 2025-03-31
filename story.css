@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('backimg.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+* Genre-specific background images */
+body.genre-horror {
+    background-image: url('horror-background.jpg');
+}
+
+body.genre-comedy {
+    background-image: url('comedy-background.jpg');
+}
+
+body.genre-fantasy {
+    background-image: url('fantasy-background.jpg');
+}
+
+body.genre-crime {
+    background-image: url('crime-background.jpg');
+}
+
+body.genre-thriller {
+    background-image: url('thriller-background.jpg');
+}
+/* Card Styles */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+/* Pagination Styles */
+.pagination .page-item .page-link {
+    color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+/* Story Card Styles */
+#story-cards .card {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#story-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for Login and Genre Sections */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#login-section, #genre-section {
+    animation: fadeIn 0.5s ease-out;
+    margin: auto;
+}
+
+/* Feedback Section Styles */
+#feedback-form .form-label {
+    font-weight: bold;
+}
+
+#feedback-form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#feedback-form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#feedback-form .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Login and Genre Section Card Styles */
+.card.p-4.mx-auto {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+.mb-4 {
+    color: #333;
+    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Feedback Section Heading */
+#feedback-section h3 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #story-cards .card {
+        width: 100%;
+    }
+
+    #feedback-form {
+        width: 100%;
+    }
+}
